@@ -55,9 +55,9 @@ async function consumeOrderEmailMessages(channel: Channel): Promise<void> {
     if (!channel) {
       channel = (await createConnection()) as Channel;
     }
-    const exchangeName = 'micrograde-order-notification';
-    const routingKey = 'order-email';
-    const queueName = 'order-email-queue';
+    const exchangeName = 'micrograde-enrolment-notification';
+    const routingKey = 'enrolment-email';
+    const queueName = 'enrolment-email-queue';
     await channel.assertExchange(exchangeName, 'direct');
     const microgradeQueue = await channel.assertQueue(queueName, {
       durable: true,
