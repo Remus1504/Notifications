@@ -7,7 +7,7 @@ import {
 
 jest.mock('../../Queues/connect');
 jest.mock('amqplib');
-jest.mock('@remus1504/micrograde');
+jest.mock('@remus1504/micrograde-shared');
 
 describe('Email Consumer', () => {
   beforeEach(() => {

@@ -1,5 +1,5 @@
 import path from 'path';
-import { IEmailLocals, winstonLogger } from '@remus1504/micrograde';
+import { IEmailLocals, winstonLogger } from '@remus1504/micrograde-shared';
 import { Logger } from 'winston';
 import { config } from '@notifications/config';
 import nodemailer, { Transporter } from 'nodemailer';
@@ -27,7 +27,7 @@ async function emailTemplates(
     });
     const email: Email = new Email({
       message: {
-        from: `Jobber App <${config.SENDER_EMAIL}>`,
+        from: `Micrograde App <${config.SENDER_EMAIL}>`,
       },
       send: true,
       preview: false,

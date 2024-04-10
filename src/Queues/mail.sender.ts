@@ -1,6 +1,6 @@
 import { config } from '@notifications/config';
 import { emailTemplates } from '../emailHelpers';
-import { IEmailLocals, winstonLogger } from '@remus1504/micrograde';
+import { IEmailLocals, winstonLogger } from '@remus1504/micrograde-shared';
 import { Logger } from 'winston';
 
 const log: Logger = winstonLogger(

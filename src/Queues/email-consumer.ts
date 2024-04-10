@@ -1,5 +1,5 @@
 import { config } from '@notifications/config';
-import { IEmailLocals, winstonLogger } from '@remus1504/micrograde';
+import { IEmailLocals, winstonLogger } from '@remus1504/micrograde-shared';
 import { Channel, ConsumeMessage } from 'amqplib';
 import { Logger } from 'winston';
 import { createConnection } from './connect';
@@ -79,10 +79,10 @@ async function consumeOrderEmailMessages(channel: Channel): Promise<void> {
           title,
           description,
           durationDays,
-          orderId,
-          orderDue,
+          enrolmentId,
+          enrolmentDue,
           requirements,
-          orderUrl,
+          enrolmentUrl,
           originalDate,
           newDate,
           reason,
@@ -105,10 +105,10 @@ async function consumeOrderEmailMessages(channel: Channel): Promise<void> {
           title,
           description,
           durationDays,
-          orderId,
-          orderDue,
+          enrolmentId,
+          enrolmentDue,
           requirements,
-          orderUrl,
+          enrolmentUrl,
           originalDate,
           newDate,
           reason,
